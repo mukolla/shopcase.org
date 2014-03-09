@@ -1,39 +1,37 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:37
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-08 12:40:11
          compiled from "/var/www/shopcase.org/themes/default/category.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:802866164530f37a9376880-53869047%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1614397706531863a2370131-18745744%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1e0f54f741519760b87b7ca2b128335c005f3e8c' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/category.tpl',
-      1 => 1390204462,
+      1 => 1394275134,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '802866164530f37a9376880-53869047',
+  'nocache_hash' => '1614397706531863a2370131-18745744',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_531863a24626c4_39174824',
   'variables' => 
   array (
     'category' => 0,
-    'categoryNameComplement' => 0,
     'scenes' => 0,
-    'link' => 0,
-    'categorySize' => 0,
     'description_short' => 0,
     'subcategories' => 0,
     'subcategory' => 0,
+    'link' => 0,
     'mediumSize' => 0,
     'img_cat_dir' => 0,
     'products' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37a949a9a6_70907652',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37a949a9a6_70907652')) {function content_530f37a949a9a6_70907652($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_531863a24626c4_39174824')) {function content_531863a24626c4_39174824($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./breadcrumb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -43,16 +41,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <?php if (isset($_smarty_tpl->tpl_vars['category']->value)){?>
 	<?php if ($_smarty_tpl->tpl_vars['category']->value->id&&$_smarty_tpl->tpl_vars['category']->value->active){?>
-		<h1>
-			<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['category']->value->name, 'htmlall', 'UTF-8');?>
-<?php if (isset($_smarty_tpl->tpl_vars['categoryNameComplement']->value)){?><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['categoryNameComplement']->value, 'htmlall', 'UTF-8');?>
-<?php }?>
-		</h1>
 		
-		<div class="resumecat category-product-count">
-			<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./category-count.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-		</div>
+                
 		
 		<?php if ($_smarty_tpl->tpl_vars['scenes']->value||$_smarty_tpl->tpl_vars['category']->value->description||$_smarty_tpl->tpl_vars['category']->value->id_image){?>
 		<div class="content_scene_cat">
@@ -61,17 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./scenes.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('scenes'=>$_smarty_tpl->tpl_vars['scenes']->value), 0);?>
 
 			<?php }else{ ?>
-				<!-- Category image -->
-				<?php if ($_smarty_tpl->tpl_vars['category']->value->id_image){?>
-				<div class="align_center">
-					<img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getCatImageLink($_smarty_tpl->tpl_vars['category']->value->link_rewrite,$_smarty_tpl->tpl_vars['category']->value->id_image,'category_default'), ENT_QUOTES, 'UTF-8', true);?>
-" alt="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['category']->value->name, 'htmlall', 'UTF-8');?>
-" title="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['category']->value->name, 'htmlall', 'UTF-8');?>
-" id="categoryImage" width="<?php echo $_smarty_tpl->tpl_vars['categorySize']->value['width'];?>
-" height="<?php echo $_smarty_tpl->tpl_vars['categorySize']->value['height'];?>
-" />
-				</div>
-				<?php }?>
+				
 			<?php }?>
 
 			<?php if ($_smarty_tpl->tpl_vars['category']->value->description){?>
@@ -134,13 +114,11 @@ default-medium_default.jpg" alt="" width="<?php echo $_smarty_tpl->tpl_vars['med
 
 		<?php if ($_smarty_tpl->tpl_vars['products']->value){?>
 			<div class="content_sortPagiBar">
-				<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+				
 				<div class="sortPagiBar clearfix">
 					<?php echo $_smarty_tpl->getSubTemplate ("./product-sort.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-					<?php echo $_smarty_tpl->getSubTemplate ("./product-compare.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+					
 					<?php echo $_smarty_tpl->getSubTemplate ("./nbr-product-page.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 				</div>
@@ -153,8 +131,7 @@ default-medium_default.jpg" alt="" width="<?php echo $_smarty_tpl->tpl_vars['med
 				<div class="sortPagiBar clearfix">
 					<?php echo $_smarty_tpl->getSubTemplate ("./product-sort.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('paginationId'=>'bottom'), 0);?>
 
-					<?php echo $_smarty_tpl->getSubTemplate ("./product-compare.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('paginationId'=>'bottom'), 0);?>
-
+					
 					<?php echo $_smarty_tpl->getSubTemplate ("./nbr-product-page.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('paginationId'=>'bottom'), 0);?>
 
 				</div>
@@ -162,6 +139,12 @@ default-medium_default.jpg" alt="" width="<?php echo $_smarty_tpl->tpl_vars['med
 
 			</div>
 		<?php }?>
+                
+                <?php if ($_smarty_tpl->tpl_vars['products']->value){?>
+                    <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+                <?php }?>
+              
 	<?php }elseif($_smarty_tpl->tpl_vars['category']->value->id){?>
 		<p class="warning"><?php echo smartyTranslate(array('s'=>'This category is currently unavailable.'),$_smarty_tpl);?>
 </p>

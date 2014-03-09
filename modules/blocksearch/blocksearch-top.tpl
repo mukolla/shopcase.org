@@ -23,6 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!-- block seach mobile -->
+{*
 {if isset($hook_mobile)}
 <div class="input_search" data-role="fieldcontain">
 	<form method="get" action="{$link->getPageLink('search')|escape:'html'}" id="searchbox">
@@ -48,4 +49,5 @@
 </div>
 {include file="$self/blocksearch-instantsearch.tpl"}
 {/if}
+*}
 <!-- /Block search module TOP -->

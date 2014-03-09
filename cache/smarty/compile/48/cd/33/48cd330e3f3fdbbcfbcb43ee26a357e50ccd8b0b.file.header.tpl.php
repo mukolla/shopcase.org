@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 12:48:30
          compiled from "/var/www/shopcase.org/themes/default/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:162985267530f37a3ec38f5-55307435%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20319912225318527e24b8e9-58551453%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '48cd330e3f3fdbbcfbcb43ee26a357e50ccd8b0b' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/header.tpl',
-      1 => 1390204462,
+      1 => 1393878379,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '162985267530f37a3ec38f5-55307435',
+  'nocache_hash' => '20319912225318527e24b8e9-58551453',
   'function' => 
   array (
   ),
@@ -48,7 +48,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'geolocation_country' => 0,
     'base_dir' => 0,
     'shop_name' => 0,
-    'logo_url' => 0,
     'logo_image_width' => 0,
     'logo_image_height' => 0,
     'HOOK_TOP' => 0,
@@ -56,9 +55,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37a40690e6_99046125',
+  'unifunc' => 'content_5318527e39f230_33415265',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37a40690e6_99046125')) {function content_530f37a40690e6_99046125($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5318527e39f230_33415265')) {function content_5318527e39f230_33415265($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="<?php echo $_smarty_tpl->tpl_vars['lang_iso']->value;?>
@@ -154,12 +153,25 @@ $_smarty_tpl->tpl_vars['js_uri']->_loop = true;
 				<a id="header_logo" href="<?php echo $_smarty_tpl->tpl_vars['base_dir']->value;?>
 " title="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['shop_name']->value, 'htmlall', 'UTF-8');?>
 ">
-					<img class="logo" src="<?php echo $_smarty_tpl->tpl_vars['logo_url']->value;?>
-" alt="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['shop_name']->value, 'htmlall', 'UTF-8');?>
+                                    
+                                <!--    <img class="logo" src="/themes/default/img/logo.png" alt="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['shop_name']->value, 'htmlall', 'UTF-8');?>
 " <?php if ($_smarty_tpl->tpl_vars['logo_image_width']->value){?>width="<?php echo $_smarty_tpl->tpl_vars['logo_image_width']->value;?>
 "<?php }?> <?php if ($_smarty_tpl->tpl_vars['logo_image_height']->value){?>height="<?php echo $_smarty_tpl->tpl_vars['logo_image_height']->value;?>
-" <?php }?>/>
+" <?php }?>/> -->
+                                    
+                                    
+				   <img class="logo" src="/themes/default/img/logo.png" alt="<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['shop_name']->value, 'htmlall', 'UTF-8');?>
+"/>
+                                        
 				</a>
+                                   
+                                <div id="logo-phone">
+                                        <ul>
+                                                <li><span><img class="icon-kyivstar" src="/themes/default/img/mtc_icon.png"></span>(095)152-37-98</li>
+                                                <li><span><img class="icon-mts" src="/themes/default/img/kyevstar_icon.png"></span>(095)152-37-98</li>
+                                        </ul>
+                                </div>
+                                   
 				<div id="header_right" class="grid_9 omega">
 					<?php echo $_smarty_tpl->tpl_vars['HOOK_TOP']->value;?>
 
@@ -172,8 +184,14 @@ $_smarty_tpl->tpl_vars['js_uri']->_loop = true;
 					<?php echo $_smarty_tpl->tpl_vars['HOOK_LEFT_COLUMN']->value;?>
 
 				</div>
-
+                                
+                                
+                                
+                                
+                                
 				<!-- Center -->
-				<div id="center_column" class=" grid_5">
+				
+                                <div id="center_column" class="grid_7">
+                                    
 	<?php }?>
 <?php }} ?>

@@ -1,36 +1,30 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-07 14:14:48
          compiled from "/var/www/shopcase.org/themes/default/order-confirmation.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:664965466530f37a36986f1-48308736%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:210098413353188f6726a435-00665137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '20af669400117202586187211772a033fd0f1a60' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/order-confirmation.tpl',
-      1 => 1390204462,
+      1 => 1394194325,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '664965466530f37a36986f1-48308736',
+  'nocache_hash' => '210098413353188f6726a435-00665137',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_53188f672fa6f2_08041165',
   'variables' => 
   array (
     'HOOK_ORDER_CONFIRMATION' => 0,
     'HOOK_PAYMENT_RETURN' => 0,
-    'is_guest' => 0,
-    'id_order_formatted' => 0,
-    'reference_order' => 0,
-    'email' => 0,
-    'link' => 0,
-    'img_dir' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37a36fe2d7_94975333',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37a36fe2d7_94975333')) {function content_530f37a36fe2d7_94975333($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_53188f672fa6f2_08041165')) {function content_53188f672fa6f2_08041165($_smarty_tpl) {?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'Order confirmation'),$_smarty_tpl);?>
 <?php list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
@@ -42,45 +36,20 @@ if (!empty($_capture_buffer)) {
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./breadcrumb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<h1><?php echo smartyTranslate(array('s'=>'Order confirmation'),$_smarty_tpl);?>
+<div id="payment-order-confirmation">
+    <h1><?php echo smartyTranslate(array('s'=>'Order confirmation'),$_smarty_tpl);?>
 </h1>
-
-<?php $_smarty_tpl->tpl_vars['current_step'] = new Smarty_variable('payment', null, 0);?>
-<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./order-steps.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-
-<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./errors.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+    <?php $_smarty_tpl->tpl_vars['current_step'] = new Smarty_variable('payment', null, 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./order-steps.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<?php echo $_smarty_tpl->tpl_vars['HOOK_ORDER_CONFIRMATION']->value;?>
-
-<?php echo $_smarty_tpl->tpl_vars['HOOK_PAYMENT_RETURN']->value;?>
+    <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./errors.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<br />
-<?php if ($_smarty_tpl->tpl_vars['is_guest']->value){?>
-	<p><?php echo smartyTranslate(array('s'=>'Your order ID is:'),$_smarty_tpl);?>
- <span class="bold"><?php echo $_smarty_tpl->tpl_vars['id_order_formatted']->value;?>
-</span> . <?php echo smartyTranslate(array('s'=>'Your order ID has been sent via email.'),$_smarty_tpl);?>
-</p>
-	<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('guest-tracking',true,null,"id_order=".((string)$_smarty_tpl->tpl_vars['reference_order']->value)."&email=".((string)$_smarty_tpl->tpl_vars['email']->value)), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Follow my order'),$_smarty_tpl);?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
-icon/order.gif" alt="<?php echo smartyTranslate(array('s'=>'Follow my order'),$_smarty_tpl);?>
-" class="icon" /></a>
-	<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('guest-tracking',true,null,"id_order=".((string)$_smarty_tpl->tpl_vars['reference_order']->value)."&email=".((string)$_smarty_tpl->tpl_vars['email']->value)), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Follow my order'),$_smarty_tpl);?>
-"><?php echo smartyTranslate(array('s'=>'Follow my order'),$_smarty_tpl);?>
-</a>
-<?php }else{ ?>
-	<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('history',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Back to orders'),$_smarty_tpl);?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>
-icon/order.gif" alt="<?php echo smartyTranslate(array('s'=>'Back to orders'),$_smarty_tpl);?>
-" class="icon" /></a>
-	<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('history',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Back to orders'),$_smarty_tpl);?>
-"><?php echo smartyTranslate(array('s'=>'Back to orders'),$_smarty_tpl);?>
-</a>
-<?php }?>
-<?php }} ?>
+    <?php echo $_smarty_tpl->tpl_vars['HOOK_ORDER_CONFIRMATION']->value;?>
+
+    <?php echo $_smarty_tpl->tpl_vars['HOOK_PAYMENT_RETURN']->value;?>
+
+
+    
+</div><?php }} ?>

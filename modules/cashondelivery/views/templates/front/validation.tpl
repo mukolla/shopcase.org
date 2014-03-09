@@ -26,32 +26,52 @@
 {capture name=path}{l s='Shipping' mod='cashondelivery'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-<h2>{l s='Order summation' mod='cashondelivery'}</h2>
+{*<h2>{l s='Order summation' mod='cashondelivery'}</h2>*}
 
 {assign var='current_step' value='payment'}
 {include file="$tpl_dir./order-steps.tpl"}
 
-<h3>{l s='Cash on delivery (COD) payment' mod='cashondelivery'}</h3>
+<div id="prepay-cashondelivery">
+    
 
-<form action="{$link->getModuleLink('cashondelivery', 'validation', [], true)|escape:'html'}" method="post">
-	<input type="hidden" name="confirm" value="1" />
-	<p>
-		<img src="{$this_path_cod}cashondelivery.jpg" alt="{l s='Cash on delivery (COD) payment' mod='cashondelivery'}" style="float:left; margin: 0px 10px 5px 0px;" />
-		{l s='You have chosen the cash on delivery method.' mod='cashondelivery'}
-		<br/><br />
-		{l s='The total amount of your order is' mod='cashondelivery'}
-		<span id="amount_{$currencies.0.id_currency}" class="price">{convertPrice price=$total}</span>
-		{if $use_taxes == 1}
-		    {l s='(tax incl.)' mod='cashondelivery'}
-		{/if}
-	</p>
-	<p>
-		<br /><br />
-		<br /><br />
-		<b>{l s='Please confirm your order by clicking \'I confirm my order\'' mod='cashondelivery'}.</b>
-	</p>
-	<p class="cart_navigation" id="cart_navigation">
-		<a href="{$link->getPageLink('order', true)}?step=3" class="button_large">{l s='Other payment methods' mod='cashondelivery'}</a>
-		<input type="submit" value="{l s='I confirm my order' mod='cashondelivery'}" class="exclusive_large" />
-	</p>
-</form>
+    <h3>{l s='Cash on delivery (COD) payment' mod='cashondelivery'}</h3>
+
+    <form action="{$link->getModuleLink('cashondelivery', 'validation', [], true)|escape:'html'}" method="post">
+            <input type="hidden" name="confirm" value="1" />
+            <p style="margin-left: 10px;">
+                    <img src="{$this_path_cod}cashondelivery.jpg" alt="{l s='Cash on delivery (COD) payment' mod='cashondelivery'}" style="float:left; margin: 0px 20px 5px 0px;" />
+                    {l s='You have chosen the cash on delivery method.' mod='cashondelivery'}
+                    <br />
+                    {l s='The total amount of your order is' mod='cashondelivery'} <b> <span id="amount" class="price">{convertPrice price=$total}</span> </b>
+                    {*<br/><br />
+                    {l s='The total amount of your order is' mod='cashondelivery'}
+                    <span id="amount_{$currencies.0.id_currency}" class="price">{convertPrice price=$total}</span>
+                    {if $use_taxes == 1}
+                        {l s='(tax incl.)' mod='cashondelivery'}
+                    {/if}*}
+            </p>
+            <p style="margin-top: 10px; margin-left: 10px;">
+                {*{l s='Bank wire account information will be displayed on the next page.' mod='bankwire'}*}
+                
+                <br />
+                {l s='После подтверждения заказа с Вами свяжеться менеджер, ' mod='cashondelivery'}
+                <br />
+                {l s='чтобы уточнить условия заказа.' mod='cashondelivery'}
+                <br /><br /><br />
+                
+                {l s='Как только Ваш заказ будет отправлен, Вы получите ' mod='cashondelivery'}
+                <b>
+                {l s='СМС-уведомление' mod='cashondelivery'}
+                </b>
+                {l s='с адресом отделения выдачи службы доставки и номером товарно-транспортной накладной.' mod='cashondelivery'}
+                
+                <br /><br />
+                <b>{l s='Please confirm your order by clicking \'I confirm my order\'' mod='cashondelivery'}.</b>
+            </p>
+            <p class="cart_navigation" id="cart_navigation">
+                    <a href="{$link->getPageLink('order', true)}?step=3" class="button_large">{l s='Назад' mod='cashondelivery'}</a>
+                    <input type="submit" value="{l s='I confirm my order' mod='cashondelivery'}" class="exclusive_large" />
+            </p>
+    </form>
+
+</div>

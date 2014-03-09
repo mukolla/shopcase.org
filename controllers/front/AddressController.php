@@ -146,9 +146,15 @@ class AddressControllerCore extends FrontController
 				$address->address2 = $normalize->AddressLineStandardization($address->address2);
 			}
 			
-			$postcode = Tools::getValue('postcode');		
+			$postcode = Tools::getValue('postcode');
+                        
+                        if($address->id_country == 216)
+                        {
+                            $country->need_zip_code = false;
+                        }
+                                
 			/* Check zip code format */
-			if ($country->zip_code_format && !$country->checkZipCode($postcode))
+			if ($country->zip_code_format && $country->need_zip_code && !$country->checkZipCode($postcode))
 				$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
 			elseif(empty($postcode) && $country->need_zip_code)
 				$this->errors[] = Tools::displayError('A Zip / Postal code is required.');

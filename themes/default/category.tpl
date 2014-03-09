@@ -28,7 +28,8 @@
 
 {if isset($category)}
 	{if $category->id AND $category->active}
-		<h1>
+		{*
+                <h1>
 			{strip}
 				{$category->name|escape:'htmlall':'UTF-8'}
 				{if isset($categoryNameComplement)}
@@ -36,10 +37,12 @@
 				{/if}
 			{/strip}
 		</h1>
-		
+		*}
+                {*
 		<div class="resumecat category-product-count">
 			{include file="$tpl_dir./category-count.tpl"}
 		</div>
+                *}
 		
 		{if $scenes || $category->description || $category->id_image}
 		<div class="content_scene_cat">
@@ -47,12 +50,12 @@
 				<!-- Scenes -->
 				{include file="$tpl_dir./scenes.tpl" scenes=$scenes}
 			{else}
-				<!-- Category image -->
+				{*<!-- Category image -->
 				{if $category->id_image}
 				<div class="align_center">
 					<img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html'}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" width="{$categorySize.width}" height="{$categorySize.height}" />
 				</div>
-				{/if}
+				{/if}*}
 			{/if}
 
 			{if $category->description}
@@ -95,10 +98,10 @@
 
 		{if $products}
 			<div class="content_sortPagiBar">
-				{include file="$tpl_dir./pagination.tpl"}
+				{* {include file="$tpl_dir./pagination.tpl"} *}
 				<div class="sortPagiBar clearfix">
 					{include file="./product-sort.tpl"}
-					{include file="./product-compare.tpl"}
+					{* {include file="./product-compare.tpl"} *}
 					{include file="./nbr-product-page.tpl"}
 				</div>
 			</div>
@@ -108,12 +111,17 @@
 			<div class="content_sortPagiBar">
 				<div class="sortPagiBar clearfix">
 					{include file="./product-sort.tpl" paginationId='bottom'}
-					{include file="./product-compare.tpl" paginationId='bottom'}
+					{* {include file="./product-compare.tpl" paginationId='bottom'} *}
 					{include file="./nbr-product-page.tpl" paginationId='bottom'}
 				</div>
 				{include file="./pagination.tpl" paginationId='bottom'}
 			</div>
 		{/if}
+                
+                {if $products}
+                    {include file="$tpl_dir./pagination.tpl"}
+                {/if}
+              
 	{elseif $category->id}
 		<p class="warning">{l s='This category is currently unavailable.'}</p>
 	{/if}

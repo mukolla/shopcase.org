@@ -1,7 +1,9 @@
 /* product desc */
 /* primary_block ***************************************************************************** */
 #primary_block {
-	margin-top:15px;
+	margin-top: 40px;
+        background: #fff;
+        padding: 7px;
 }
 
 /* pb-right-column ***************************************************************************** */
@@ -136,12 +138,13 @@ span.view_scroll_spacer {
 #pb-left-column {
 	float:left;
 	margin-left:14px;
-	width:255px;
+	width: 455px;
 }
 
 #pb-left-column h1 {
-	padding-bottom:5px;
-	font-size:18px;
+	padding-bottom: 5px;
+        font-size: 14px;
+        color: #6f6f6f;
 }
 
 #pb-left-column #short_description_block {
@@ -166,7 +169,7 @@ span.view_scroll_spacer {
 	width:125px;
 	font-weight:700;
 	font-size:12px;
-	text-align:right;
+	text-align: left;
 }
 
 .ie7 #pb-left-column #buy_block label {margin-right:5px;float:left}
@@ -260,7 +263,7 @@ span.view_scroll_spacer {
 	width:125px;
 	font-weight:700;
 	font-size:12px;
-	text-align:right;
+	text-align: left;
 }
 
 #availability_statut #availability_value {
@@ -275,7 +278,7 @@ span.view_scroll_spacer {
 }
 
 #availability_statut #availability_value.warning_inline {
-	background-color:#9B0000;
+	background-color: #eb5552;
 }
 
 /* prices */
@@ -305,7 +308,8 @@ span.view_scroll_spacer {
 	font-weight:700;
 	font-size:24px;
 	line-height:18px;
-	color:#9b0000;
+/*	color:#9b0000;*/
+	color:#4c4c4c;
 }
 
 #reduction_percent,#reduction_amount {

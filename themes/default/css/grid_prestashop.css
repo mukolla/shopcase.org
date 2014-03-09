@@ -28,7 +28,7 @@
 	display:inline;
 	float: left;
 	position: relative;
-	margin-right: 20px;
+/*	margin-right: 20px;*/
 }
 
 
@@ -46,7 +46,7 @@
 .container_9 .grid_4 {width:424px;}
 .container_9 .grid_5 {width:535px;}
 .container_9 .grid_6 {width:646px;}
-.container_9 .grid_7 {width:757px;}
+.container_9 .grid_7 {width:751px;}
 .container_9 .grid_8 {width:868px;}
 .container_9 .grid_9 {width:980px;}
 

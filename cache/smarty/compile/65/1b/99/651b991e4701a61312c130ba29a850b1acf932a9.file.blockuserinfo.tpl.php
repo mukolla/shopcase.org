@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 15:16:47
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 12:48:28
          compiled from "/var/www/shopcase.org/modules/blockuserinfo/blockuserinfo.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:271713862530f3abfd2b821-45208600%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16236503985318527c966e74-92534063%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '651b991e4701a61312c130ba29a850b1acf932a9' => 
     array (
       0 => '/var/www/shopcase.org/modules/blockuserinfo/blockuserinfo.tpl',
-      1 => 1390204460,
+      1 => 1393794747,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '271713862530f3abfd2b821-45208600',
+  'nocache_hash' => '16236503985318527c966e74-92534063',
   'function' => 
   array (
   ),
@@ -24,14 +24,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'priceDisplay' => 0,
     'blockuser_cart_flag' => 0,
     'cart' => 0,
-    'logged' => 0,
-    'cookie' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f3abfdf1d75_14600046',
+  'unifunc' => 'content_5318527c9d55e1_62946380',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f3abfdf1d75_14600046')) {function content_530f3abfdf1d75_14600046($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5318527c9d55e1_62946380')) {function content_5318527c9d55e1_62946380($_smarty_tpl) {?>
 
 <!-- Block user information module HEADER -->
 <div id="header_user" <?php if ($_smarty_tpl->tpl_vars['PS_CATALOG_MODE']->value){?>class="header_user_catalog"<?php }?>>
@@ -71,26 +69,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " rel="nofollow"><?php echo smartyTranslate(array('s'=>'Your Account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
 </a></li>
 	</ul>
-	<p id="header_user_info">
-		<?php echo smartyTranslate(array('s'=>'Welcome','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-
-		<?php if ($_smarty_tpl->tpl_vars['logged']->value){?>
-			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('my-account',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'View my customer account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-" class="account" rel="nofollow"><span><?php echo $_smarty_tpl->tpl_vars['cookie']->value->customer_firstname;?>
- <?php echo $_smarty_tpl->tpl_vars['cookie']->value->customer_lastname;?>
-</span></a>
-			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index',true,null,"mylogout"), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Log me out','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-" class="logout" rel="nofollow"><?php echo smartyTranslate(array('s'=>'Log out','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-</a>
-		<?php }else{ ?>
-			<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('my-account',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'Login to your customer account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-" class="login" rel="nofollow"><?php echo smartyTranslate(array('s'=>'Login','mod'=>'blockuserinfo'),$_smarty_tpl);?>
-</a>
-		<?php }?>
-	</p>
+        
+	
+        
 </div>
 <!-- /Block user information module HEADER -->
 <?php }} ?>

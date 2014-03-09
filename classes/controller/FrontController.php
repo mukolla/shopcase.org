@@ -59,7 +59,7 @@ class FrontControllerCore extends Controller
 
 	public function __construct()
 	{
-		$this->controller_type = 'front';
+                $this->controller_type = 'front';
 
 		global $useSSL;
 

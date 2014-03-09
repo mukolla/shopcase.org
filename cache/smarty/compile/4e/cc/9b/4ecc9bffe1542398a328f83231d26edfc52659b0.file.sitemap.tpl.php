@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:55
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-07 20:05:31
          compiled from "/var/www/shopcase.org/themes/default/sitemap.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1383586083530f37bb02ad04-53208818%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8596487065319b1acc293c8-22879705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4ecc9bffe1542398a328f83231d26edfc52659b0' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/sitemap.tpl',
-      1 => 1390204462,
+      1 => 1394215461,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1383586083530f37bb02ad04-53208818',
+  'nocache_hash' => '8596487065319b1acc293c8-22879705',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5319b1acd90d47_52270697',
   'variables' => 
   array (
     'link' => 0,
@@ -32,10 +34,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'display_store' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37bb188c12_29181120',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37bb188c12_29181120')) {function content_530f37bb188c12_29181120($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5319b1acd90d47_52270697')) {function content_5319b1acd90d47_52270697($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'Sitemap'),$_smarty_tpl);?>

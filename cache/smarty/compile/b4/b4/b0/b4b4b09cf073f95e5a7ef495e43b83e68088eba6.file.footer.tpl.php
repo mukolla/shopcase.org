@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 15:16:34
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 12:39:48
          compiled from "/var/www/shopcase.org/admin0094/themes/default/template/footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:657441163530f3ab23c5bb7-09802368%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:47363951253185074e1d030-19786554%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '657441163530f3ab23c5bb7-09802368',
+  'nocache_hash' => '47363951253185074e1d030-19786554',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f3ab23eac46_17932706',
+  'unifunc' => 'content_53185074e42c08_77757938',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f3ab23eac46_17932706')) {function content_530f3ab23eac46_17932706($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_53185074e42c08_77757938')) {function content_53185074e42c08_77757938($_smarty_tpl) {?>
 			<div style="clear:both;height:0;line-height:0">&nbsp;</div>
 		</div>
 		<div style="clear:both;height:0;line-height:0">&nbsp;</div>

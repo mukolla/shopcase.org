@@ -4,6 +4,9 @@
 	clear:both;
 	float: right;
 	margin-top:8px;
+        margin-top: 12px;
+        position: absolute;
+        left: 807px;
 }
 
 #header_right #header_user.header_user_catalog {
@@ -20,8 +23,8 @@
 .lt-ie6 #shopping_cart {width: 130px;}
 #shopping_cart a{
 	height: 15px;
-	padding:15px 27px 10px 43px;
-	background: url('img/icon/cart.gif') no-repeat 10px 9px #eee;
+	padding: 9px 0px 11px 40px;
+	background: url('img/icon/cart.gif') no-repeat 10px 9px #fff;
 	min-width: 130px;/* 200 */
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;

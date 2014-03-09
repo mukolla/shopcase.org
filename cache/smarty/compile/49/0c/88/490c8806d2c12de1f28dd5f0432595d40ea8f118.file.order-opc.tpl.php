@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:53
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 19:00:04
          compiled from "/var/www/shopcase.org/themes/default/order-opc.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:864904073530f37b93ee950-20054209%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:153122512053185b8ada0a69-71993181%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '490c8806d2c12de1f28dd5f0432595d40ea8f118' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/order-opc.tpl',
-      1 => 1390204462,
+      1 => 1394125183,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '864904073530f37b93ee950-20054209',
+  'nocache_hash' => '153122512053185b8ada0a69-71993181',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_53185b8ae92265_34998784',
   'variables' => 
   array (
     'opc' => 0,
@@ -41,10 +43,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'productNumber' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37b94cd4f9_00103370',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37b94cd4f9_00103370')) {function content_530f37b94cd4f9_00103370($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_53185b8ae92265_34998784')) {function content_53185b8ae92265_34998784($_smarty_tpl) {?>
 
 <?php if ($_smarty_tpl->tpl_vars['opc']->value){?>
 	<?php $_smarty_tpl->tpl_vars["back_order_page"] = new Smarty_variable("order-opc.php", null, 0);?>

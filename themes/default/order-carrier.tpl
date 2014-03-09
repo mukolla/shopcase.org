@@ -102,7 +102,7 @@
 {if isset($virtual_cart) && $virtual_cart}
 	<input id="input_virtual_carrier" class="hidden" type="hidden" name="id_carrier" value="0" />
 {else}
-	<h3 class="carrier_title">{l s='Choose your delivery method'}</h3>
+	{*<h3 class="carrier_title">{l s='Choose your delivery method'}</h3>*}
 	
 	<div id="HOOK_BEFORECARRIER">
 		{if isset($carriers) && isset($HOOK_BEFORECARRIER)}
@@ -121,13 +121,13 @@
 	<div class="delivery_options_address">
 	{if isset($delivery_option_list)}
 		{foreach $delivery_option_list as $id_address => $option_list}
-			<h3>
+			{*<h3>
 				{if isset($address_collection[$id_address])}
 					{l s='Choose a shipping option for this address:'} {$address_collection[$id_address]->alias}
 				{else}
 					{l s='Choose a shipping option'}
 				{/if}
-			</h3>
+			</h3>*}
 			<div class="delivery_options">
 			{foreach $option_list as $key => $option}
 				<div class="delivery_option {if ($option@index % 2)}alternate_{/if}item">
@@ -304,8 +304,8 @@
 	</p>
 </form>
 {else}
-	<h3>{l s='Leave a message'}</h3>
-	<div>
+<h2 id="post-message">{l s='Leave a message'}</h2>
+	<div id="delivery-message-block">
 		<p>{l s='If you would like to add a comment about your order, please write it in the field below.'}</p>
 		<p><textarea cols="120" rows="3" name="message" id="message">{if isset($oldMessage)}{$oldMessage|escape:'htmlall':'UTF-8'}{/if}</textarea></p>
 	</div>

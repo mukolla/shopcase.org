@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:32
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-07 01:34:52
          compiled from "/var/www/shopcase.org/themes/default/guest-tracking.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1825579952530f37a43bafb6-83964816%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10148705825319061c47bf08-41622382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1825579952530f37a43bafb6-83964816',
+  'nocache_hash' => '10148705825319061c47bf08-41622382',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37a4536817_09397987',
+  'unifunc' => 'content_5319061c61b001_27481525',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37a4536817_09397987')) {function content_530f37a4536817_09397987($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5319061c61b001_27481525')) {function content_5319061c61b001_27481525($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'Guest Tracking'),$_smarty_tpl);?>

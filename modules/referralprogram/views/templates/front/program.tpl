@@ -1,5 +1,5 @@
 {*
-* 2007-2013 PrestaShop
+* 2007-2014 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,7 +18,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2013 PrestaShop SA
+*  @copyright  2007-2014 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
@@ -83,7 +83,7 @@
 
 	<div id="idTab1">
 		<p class="bold">
-			<strong>{l s='Get a discount of %1$d %2$s for you and your friends by recommending this Website.' sprintf=[$discount,$currencySign] mod='referralprogram'}</strong>
+			<strong>{l s='Get a discount of %1$s for you and your friends by recommending this Website.' sprintf=[$discount] mod='referralprogram'}</strong>
 		</p>
 		{if $canSendInvitations}
 			<p>
@@ -109,9 +109,9 @@
 					{section name=friends start=0 loop=$nbFriends step=1}
 					<tr class="{if $smarty.section.friends.index % 2}item{else}alternate_item{/if}">
 						<td class="align_right">{$smarty.section.friends.iteration}</td>
-						<td><input type="text" class="text" name="friendsLastName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsLastName[$smarty.section.friends.index])}{$smarty.post.friendsLastName[$smarty.section.friends.index]|escape:'htmlall':'UTF-8'}{/if}" /></td>
-						<td><input type="text" class="text" name="friendsFirstName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsFirstName[$smarty.section.friends.index])}{$smarty.post.friendsFirstName[$smarty.section.friends.index]|escape:'htmlall':'UTF-8'}{/if}" /></td>
-						<td><input type="text" class="text" name="friendsEmail[{$smarty.section.friends.index}]" size="20" value="{if isset($smarty.post.friendsEmail[$smarty.section.friends.index])}{$smarty.post.friendsEmail[$smarty.section.friends.index]|escape:'htmlall':'UTF-8'}{/if}" /></td>
+						<td><input type="text" class="text" name="friendsLastName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsLastName[$smarty.section.friends.index])}{$smarty.post.friendsLastName[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
+						<td><input type="text" class="text" name="friendsFirstName[{$smarty.section.friends.index}]" size="14" value="{if isset($smarty.post.friendsFirstName[$smarty.section.friends.index])}{$smarty.post.friendsFirstName[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
+						<td><input type="text" class="text" name="friendsEmail[{$smarty.section.friends.index}]" size="20" value="{if isset($smarty.post.friendsEmail[$smarty.section.friends.index])}{$smarty.post.friendsEmail[$smarty.section.friends.index]|escape:'html':'UTF-8'}{/if}" /></td>
 					</tr>
 					{/section}
 				</tbody>

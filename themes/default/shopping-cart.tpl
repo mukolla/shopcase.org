@@ -26,7 +26,7 @@
 {capture name=path}{l s='Your shopping cart'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-<h1 id="cart_title">{l s='Shopping-cart summary'}</h1>
+{*<h1 id="cart_title">{l s='Shopping-cart summary'}</h1>*}
 
 {if isset($account_created)}
 	<p class="success">
@@ -67,7 +67,9 @@
 		<br class="clear" />
 	</div>
 {/if}
-<p>{l s='Your shopping cart contains:'} <span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span></p>
+
+{*<p>{l s='Your shopping cart contains:'} <span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span></p>*}
+
 <div id="order-detail-content" class="table_block">
 	<table id="cart_summary" class="std">
 		<thead>
@@ -418,6 +420,12 @@
 		{/if}
 	{/if}
 	<a href="{if (isset($smarty.server.HTTP_REFERER) && strstr($smarty.server.HTTP_REFERER, 'order.php')) || isset($smarty.server.HTTP_REFERER) && strstr($smarty.server.HTTP_REFERER, 'order-opc') || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|escape:'htmlall':'UTF-8'|secureReferrer}{/if}" class="button_large" title="{l s='Continue shopping'}">&laquo; {l s='Continue shopping'}</a>
+        
+        <span class="cnt-order">
+            <a href="#opc_new_account" onclick="scroll_opc_new_account()" class="button_large" title="{l s='Оформить заказ'}">{l s='Оформить заказ'}</a>
+        </span>
+        
+        
 </p>
 	{if !empty($HOOK_SHOPPING_CART_EXTRA)}
 		<div class="clear"></div>

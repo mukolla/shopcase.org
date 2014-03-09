@@ -69,8 +69,8 @@ function updatePaymentMethodsDisplay()
 }
 
 function updateAddressSelection()
-{
-	var idAddress_delivery = ($('#opc_id_address_delivery').length == 1 ? $('#opc_id_address_delivery').val() : $('#id_address_delivery').val());
+{        
+        var idAddress_delivery = ($('#opc_id_address_delivery').length == 1 ? $('#opc_id_address_delivery').val() : $('#id_address_delivery').val());
 	var idAddress_invoice = ($('#opc_id_address_invoice').length == 1 ? $('#opc_id_address_invoice').val() : ($('#addressesAreEquals:checked').length == 1 ? idAddress_delivery : ($('#id_address_invoice').length == 1 ? $('#id_address_invoice').val() : idAddress_delivery)));
 
 	$('#opc_account-overlay').fadeIn('slow');
@@ -159,6 +159,26 @@ function updateAddressSelection()
 				if ($('#gift-price').length == 1)
 					$('#gift-price').html(jsonData.gift_price);
 				$('#opc_account-overlay, #opc_delivery_methods-overlay, #opc_payment_methods-overlay').fadeOut('slow');
+                                
+                                $('#opc_delivery_methods').show();
+                                
+                                $('html, body').animate({
+                                    scrollTop: $("#carrier_area").offset().top
+                                }, 2000);
+                                
+                                $('##order-opc #opc_payment_methods').show();
+                                
+                                $('#post-message').on('click', function(){
+                                    if ( !Boolean($('#delivery-message-block').is(':visible') ) )
+                                    {
+                                        $('#delivery-message-block').slideDown('slow');
+                                    }
+                                    else
+                                    {
+                                        $('#delivery-message-block').slideUp('slow');
+                                    }
+                                });
+                                
 			}
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -431,7 +451,7 @@ $(function() {
 		{
 			$('#opc_account_choice').show();
 			$('#opc_account_form, #opc_invoice_address').hide();
-			
+                        
 			$('#opc_createAccount').click(function() {
 				$('.is_customer_param').show();
 				$('#opc_account_form').slideDown('slow');
@@ -443,7 +463,7 @@ $(function() {
 			});
 			$('#opc_guestCheckout').click(function() {
 				$('.is_customer_param').hide();
-				$('#opc_account_form').slideDown('slow');
+				$('#opc_account_form').show();
 				$('#is_new_customer').val('0');
 				$('#opc_account_choice, #opc_invoice_address').hide();
 				$('#new_account_title').html(txtInstantCheckout);
@@ -640,11 +660,27 @@ $(function() {
 							$('#opc_account_saved').fadeIn('slow');
 							$('#submitAccount').hide();
 							updateAddressSelection();
+                                                        
+                                                        //$('#opc_new_account').slideUp('slow');
+                                                        //$('#order-detail-content').slideUp('slow');
+                                                        
+                                                        //$('#opc_delivery_methods').slideDown('slow');
+                                                        $('#opc_delivery_methods').show();
 						}
 						else
-							updateNewAccountToAddressBlock();
+						{
+                                                    updateNewAccountToAddressBlock();
+                                                }
 					}
 					$('#opc_new_account-overlay, #opc_delivery_methods-overlay, #opc_payment_methods-overlay').fadeIn('slow');
+                                        
+                                        //$('#opc_new_account').slideUp('slow');
+                                        //$('#order-detail-content').slideUp('slow');
+                                        
+//                                        $('html, body').animate({
+//                                            scrollTop: $("#elementtoScrollToID").offset().top
+//                                        }, 2000);
+                                        
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					if (textStatus !== 'abort')
@@ -663,11 +699,27 @@ $(function() {
 		if ($(this).is(':visible'))
 		{
 			$('#opc_account_saved').fadeOut('slow');
-			$('#submitAccount').show();
+			$('#submitAccount').show('slow');
 		}
 	});
-	
+        
+        $('#opc_guestCheckout').click();
+        $('#opc_delivery_methods').hide();
+        
+        
+        $('#opc_new_account h2').on('click', function(){
+           if ( !Boolean($('#opc_new_account form fieldset').is(':visible') ) )
+           {
+               $('#opc_new_account form fieldset').slideDown('slow');
+           }
+        });        
 });
+
+function scroll_opc_new_account(){
+    $('#opc_new_account fieldset').slideDown('slow');
+
+    $('html, body').animate({scrollTop: $("#opc_new_account").offset().top}, 2000);
+};
 
 function bindCheckbox()
 {

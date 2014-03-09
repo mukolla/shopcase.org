@@ -55,7 +55,8 @@ function updateNeedIDNumber(suffix)
 
 function updateZipCode(suffix)
 {
-	var idCountry = parseInt($('select#id_country'+(suffix !== undefined ? '_'+suffix : '')).val());
+	return true;
+        var idCountry = parseInt($('select#id_country'+(suffix !== undefined ? '_'+suffix : '')).val());
 	if (countriesNeedZipCode[idCountry] !== 0)
 		$('.postcode'+(suffix !== undefined ? '_'+suffix : '')+':hidden').fadeIn('slow');
 	else

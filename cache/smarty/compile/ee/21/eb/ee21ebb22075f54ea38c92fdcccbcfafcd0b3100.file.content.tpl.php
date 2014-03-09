@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 15:16:41
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 13:15:05
          compiled from "/var/www/shopcase.org/admin0094/themes/default/template/controllers/home/content.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:932870558530f3ab99a79e6-52009617%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1230885536531858b9a9cda1-10624123%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '932870558530f3ab99a79e6-52009617',
+  'nocache_hash' => '1230885536531858b9a9cda1-10624123',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f3ab9a4a552_34511776',
+  'unifunc' => 'content_531858b9b3d4b7_16917263',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f3ab9a4a552_34511776')) {function content_530f3ab9a4a552_34511776($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_531858b9b3d4b7_16917263')) {function content_531858b9b3d4b7_16917263($_smarty_tpl) {?>
 
 	<div class="pageTitleHome">
 		<span><h3><?php echo smartyTranslate(array('s'=>'Dashboard'),$_smarty_tpl);?>

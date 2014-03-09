@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:37
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 22:03:43
          compiled from "/var/www/shopcase.org/themes/default/order-carrier.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:357253900530f37a94b4033-89392321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16152456153185b8bb63e28-76847753%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '93ff77ba5c77ec39dc5211adbbc22de30103e85a' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/order-carrier.tpl',
-      1 => 1390204462,
+      1 => 1394136156,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '357253900530f37a94b4033-89392321',
+  'nocache_hash' => '16152456153185b8bb63e28-76847753',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_53185b8be97053_35355592',
   'variables' => 
   array (
     'opc' => 0,
@@ -33,9 +35,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'recyclablePackAllowed' => 0,
     'recyclable' => 0,
     'delivery_option_list' => 0,
-    'id_address' => 0,
-    'address_collection' => 0,
     'option_list' => 0,
+    'id_address' => 0,
     'key' => 0,
     'delivery_option' => 0,
     'option' => 0,
@@ -59,10 +60,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'oldMessage' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37a97c1b12_53674320',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37a97c1b12_53674320')) {function content_530f37a97c1b12_53674320($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_53185b8be97053_35355592')) {function content_53185b8be97053_35355592($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 <?php if (!$_smarty_tpl->tpl_vars['opc']->value){?>
 	<script type="text/javascript">
@@ -165,8 +164,7 @@ if (!empty($_capture_buffer)) {
 <?php if (isset($_smarty_tpl->tpl_vars['virtual_cart']->value)&&$_smarty_tpl->tpl_vars['virtual_cart']->value){?>
 	<input id="input_virtual_carrier" class="hidden" type="hidden" name="id_carrier" value="0" />
 <?php }else{ ?>
-	<h3 class="carrier_title"><?php echo smartyTranslate(array('s'=>'Choose your delivery method'),$_smarty_tpl);?>
-</h3>
+	
 	
 	<div id="HOOK_BEFORECARRIER">
 		<?php if (isset($_smarty_tpl->tpl_vars['carriers']->value)&&isset($_smarty_tpl->tpl_vars['HOOK_BEFORECARRIER']->value)){?>
@@ -194,16 +192,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['option_list']->key => $_smarty_tpl->t
 $_smarty_tpl->tpl_vars['option_list']->_loop = true;
  $_smarty_tpl->tpl_vars['id_address']->value = $_smarty_tpl->tpl_vars['option_list']->key;
 ?>
-			<h3>
-				<?php if (isset($_smarty_tpl->tpl_vars['address_collection']->value[$_smarty_tpl->tpl_vars['id_address']->value])){?>
-					<?php echo smartyTranslate(array('s'=>'Choose a shipping option for this address:'),$_smarty_tpl);?>
- <?php echo $_smarty_tpl->tpl_vars['address_collection']->value[$_smarty_tpl->tpl_vars['id_address']->value]->alias;?>
-
-				<?php }else{ ?>
-					<?php echo smartyTranslate(array('s'=>'Choose a shipping option'),$_smarty_tpl);?>
-
-				<?php }?>
-			</h3>
+			
 			<div class="delivery_options">
 			<?php  $_smarty_tpl->tpl_vars['option'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['option']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
@@ -497,9 +486,9 @@ if (!$_smarty_tpl->tpl_vars['address']->_loop) {
 	</p>
 </form>
 <?php }else{ ?>
-	<h3><?php echo smartyTranslate(array('s'=>'Leave a message'),$_smarty_tpl);?>
-</h3>
-	<div>
+<h2 id="post-message"><?php echo smartyTranslate(array('s'=>'Leave a message'),$_smarty_tpl);?>
+</h2>
+	<div id="delivery-message-block">
 		<p><?php echo smartyTranslate(array('s'=>'If you would like to add a comment about your order, please write it in the field below.'),$_smarty_tpl);?>
 </p>
 		<p><textarea cols="120" rows="3" name="message" id="message"><?php if (isset($_smarty_tpl->tpl_vars['oldMessage']->value)){?><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['oldMessage']->value, 'htmlall', 'UTF-8');?>

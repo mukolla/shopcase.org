@@ -109,7 +109,7 @@ class BlockViewed extends Module
 
 			$productIds = implode(',', $productsViewed);
 			$productsImages = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
-			SELECT MAX(image_shop.id_image) id_image, p.id_product, il.legend, product_shop.active, pl.name, pl.description_short, pl.link_rewrite, cl.link_rewrite AS category_rewrite
+			SELECT MAX(image_shop.id_image) id_image, p.id_product, il.legend, product_shop.active, p.price, pl.name, pl.description_short, pl.link_rewrite, cl.link_rewrite AS category_rewrite
 			FROM '._DB_PREFIX_.'product p
 			'.Shop::addSqlAssociation('product', 'p').'
 			LEFT JOIN '._DB_PREFIX_.'product_lang pl ON (pl.id_product = p.id_product'.Shop::addSqlRestrictionOnLang('pl').')
@@ -140,6 +140,7 @@ class BlockViewed extends Module
 					$obj->cover = (int)($productsImagesArray[$productViewed]['id_product']).'-'.(int)($productsImagesArray[$productViewed]['id_image']);
 					$obj->legend = $productsImagesArray[$productViewed]['legend'];
 					$obj->name = $productsImagesArray[$productViewed]['name'];
+                                        $obj->price = $productsImagesArray[$productViewed]['price'];
 					$obj->description_short = $productsImagesArray[$productViewed]['description_short'];
 					$obj->link_rewrite = $productsImagesArray[$productViewed]['link_rewrite'];
 					$obj->category_rewrite = $productsImagesArray[$productViewed]['category_rewrite'];

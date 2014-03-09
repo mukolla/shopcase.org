@@ -49,7 +49,15 @@ class blocksocial extends Module
 	public function uninstall()
 	{
 		//Delete configuration			
-		return (Configuration::deleteByName('blocksocial_facebook') AND Configuration::deleteByName('blocksocial_twitter') AND Configuration::deleteByName('blocksocial_rss') AND parent::uninstall());
+		return (
+                            Configuration::deleteByName('blocksocial_facebook') 
+                        AND Configuration::deleteByName('blocksocial_twitter') 
+                        AND Configuration::deleteByName('blocksocial_rss') 
+                        AND Configuration::deleteByName('blocksocial_vkontakte') 
+                        AND Configuration::deleteByName('blocksocial_odnoklasniki') 
+                        AND Configuration::deleteByName('blocksocial_mailru') 
+                        AND parent::uninstall()
+                       );
 	}
 	
 	public function getContent()
@@ -61,6 +69,9 @@ class blocksocial extends Module
 			Configuration::updateValue('blocksocial_facebook', (($_POST['facebook_url'] != '') ? $_POST['facebook_url']: ''));
 			Configuration::updateValue('blocksocial_twitter', (($_POST['twitter_url'] != '') ? $_POST['twitter_url']: ''));		
 			Configuration::updateValue('blocksocial_rss', (($_POST['rss_url'] != '') ? $_POST['rss_url']: ''));				
+			Configuration::updateValue('blocksocial_vkontakte', (($_POST['vkontakte_url'] != '') ? $_POST['vkontakte_url']: ''));				
+			Configuration::updateValue('blocksocial_odnoklasniki', (($_POST['odnoklasniki_url'] != '') ? $_POST['odnoklasniki_url']: ''));				
+			Configuration::updateValue('blocksocial_mailru', (($_POST['mailru_url'] != '') ? $_POST['mailru_url']: ''));				
 			$this->_clearCache('blocksocial.tpl');
 			$output = '<div class="conf confirm">'.$this->l('Configuration updated').'</div>';
 		}
@@ -76,8 +87,25 @@ class blocksocial extends Module
 				<label for="twitter_url">'.$this->l('Twitter URL: ').'</label>
 				<input type="text" id="twitter_url" name="twitter_url" value="'.Tools::safeOutput((Configuration::get('blocksocial_twitter') != "") ? Configuration::get('blocksocial_twitter') : "").'" />
 				<div class="clear">&nbsp;</div>		
-				<label for="rss_url">'.$this->l('RSS URL: ').'</label>
+
+                                <label for="vkontakte_url">'.$this->l('Vkontakte URL: ').'</label>
+				<input type="text" id="vkontakte_url" name="vkontakte_url" value="'.Tools::safeOutput((Configuration::get('blocksocial_vkontakte') != "") ? Configuration::get('blocksocial_vkontakte') : "").'" />
+                                
+                                <div class="clear">&nbsp;</div>
+
+                                <label for="odnoklasniki_url">'.$this->l('Odnoklassniki URL: ').'</label>
+				<input type="text" id="odnoklasniki_url" name="odnoklasniki_url" value="'.Tools::safeOutput((Configuration::get('blocksocial_odnoklasniki') != "") ? Configuration::get('blocksocial_odnoklasniki') : "").'" />
+                                
+                                <div class="clear">&nbsp;</div>		
+                                
+                                <label for="mailru_url">'.$this->l('Mail.ru  URL: ').'</label>
+				<input type="text" id="mailru_url" name="mailru_url" value="'.Tools::safeOutput((Configuration::get('blocksocial_mailru') != "") ? Configuration::get('blocksocial_mailru') : "").'" />
+                                
+                                <div class="clear">&nbsp;</div>		
+
+                                <label for="rss_url">'.$this->l('RSS URL: ').'</label>
 				<input type="text" id="rss_url" name="rss_url" value="'.Tools::safeOutput((Configuration::get('blocksocial_rss') != "") ? Configuration::get('blocksocial_rss') : "").'" />
+                                    
 				<div class="clear">&nbsp;</div>						
 				<br /><center><input type="submit" name="submitModule" value="'.$this->l('Update settings').'" class="button" /></center>
 			</fieldset>
@@ -95,7 +123,10 @@ class blocksocial extends Module
 			$this->smarty->assign(array(
 				'facebook_url' => Configuration::get('blocksocial_facebook'),
 				'twitter_url' => Configuration::get('blocksocial_twitter'),
-				'rss_url' => Configuration::get('blocksocial_rss')
+				'rss_url' => Configuration::get('blocksocial_rss'),
+				'vkontakte_url' => Configuration::get('blocksocial_vkontakte'),
+				'odnoklasniki_url' => Configuration::get('blocksocial_odnoklasniki'),
+				'mailru_url' => Configuration::get('blocksocial_mailru')
 			));
 
 		return $this->display(__FILE__, 'blocksocial.tpl', $this->getCacheId());

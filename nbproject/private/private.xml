@@ -3,7 +3,45 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/pc/www/shopcase.org/index.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/views/templates/front/validation.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/index.php</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/css/order-opc.css</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/config.xml</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/views/templates/hook/confirmation.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/views/templates/front/payment_execution.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/views/templates/hook/payment_return.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/order-detail.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/blocknewproducts/blocknewproducts.css</file>
+            <file>file:/home/pc/www/shopcase.org/controllers/front/OrderOpcController.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/controllers/index.php</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/order-carrier.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/cashondelivery.gif</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/views/templates/hook/payment.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/classes/order/Order.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/payment.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/translations/ru.php</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/modules/blocknewproducts/blocknewproducts.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/shopping-cart.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/controllers/front/DeliveryinfoController.php</file>
+            <file>file:/home/pc/www/shopcase.org/admin0094/themes/default/template/controllers/payment/restrictions.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/config.xml</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/order-opc-new-account.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/views/templates/hook/index.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cheque/views/templates/hook/payment.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/translations/ru.php</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/css/global.css</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/views/templates/index.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/views/templates/index.php</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/deliveryinfo.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/order-confirmation.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/sitemap.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/admin0094/themes/default/template/controllers/orders/form.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/bankwire.php</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/js/order-opc.js</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/views/templates/hook/payment.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/themes/default/category.tpl</file>
+            <file>file:/home/pc/www/shopcase.org/modules/cashondelivery/cashondelivery.php</file>
+            <file>file:/home/pc/www/shopcase.org/modules/bankwire/validation.php</file>
         </group>
     </open-files>
 </project-private>

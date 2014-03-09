@@ -1,17 +1,26 @@
 h2.productscategory_h2 {
-	margin:40px 0 20px 0;
-	padding:10px 0;
-	border-bottom:1px solid #ccc;
-	font-size:18px;
-	color:#333
+	margin: 25px 0 0 0;
+        padding: 10px 0;
+        font-size: 13px;
+        background: none repeat scroll 0 0 #fff;
+        color: #E64B46;
+        border-radius: 4px 4px 0 0;
+        padding-left: 10px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
 }
 
-#productscategory {overflow:auto}
+#productscategory {
+    overflow: hidden;
+    padding-top: 7px;
+}
 
 #productscategory_list {
 	overflow: hidden;
 	float: left;
 	width: 96%;
+        text-align: center;
 }
 #productscategory_list ul {
 	list-style-type:none;
@@ -25,12 +34,29 @@ h2.productscategory_h2 {
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	#productscategory_list li   {
-		margin: 0 7px;
+/*		margin: 20px 7px;
+                background: #fff;
+                width: 209px;
+                text-align: center;
+                padding: 10px 0;*/
+                
+                background: #fff;
+                padding: 0 10px;
+                border-radius: 3px;
+                overflow: hidden;
+                height: 330px;
+                padding-top: 10px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                border: 1px solid #EEE1D9;
 	}
 }
 
 #productscategory_list li a.lnk_img {display:block}
-#productscategory_list li a img {border:1px solid #ccc}
+#productscategory_list li a img {
+    border: 1px solid #EEE1D9;
+    border-radius: 4px;
+}
 #productscategory_list li p.product_name {text-align:center}
 
 #productscategory_noscroll {
@@ -50,3 +76,40 @@ h2.productscategory_h2 {
 }
 
 #productscategory_scroll_right { background-image: url('img/thumbs_right.gif'); }
+
+
+#productscategory_list h5.s_title_block {
+    padding-top: 5px;
+    height: 30px;
+    font-size: 12px;
+    color: #c4c4c4;
+    padding-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    width: 188px;
+}
+
+#productscategory_list .price_container {
+    padding: 0;
+    text-align: center;
+    margin: 17px 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+#productscategory_list .lnk_more {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none!important;
+    cursor: pointer;
+    display: block;
+    margin: 0 16px;
+    padding: 0;
+    height: 24px;
+    line-height: 23px;
+    border: 1px solid;
+    background: #e64a47;
+    border-radius: 4px;
+}

@@ -220,13 +220,13 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 		</div>
 		{/if}
 		{if isset($images) && count($images) > 1}<p class="resetimg clear"><span id="wrapResetImages" style="display: none;"><img src="{$img_dir}icon/cancel_11x13.gif" alt="{l s='Cancel'}" width="11" height="13"/> <a id="resetImages" href="{$link->getProductLink($product)|escape:'html'}" onclick="$('span#wrapResetImages').hide('slow');return (false);">{l s='Display all pictures'}</a></span></p>{/if}
-		<!-- usefull links-->
+		{*<!-- usefull links-->
 		<ul id="usefull_link_block">
 			{if $HOOK_EXTRA_LEFT}{$HOOK_EXTRA_LEFT}{/if}
 			<li class="print"><a href="javascript:print();">{l s='Print'}</a></li>
 			{if $have_image && !$jqZoomEnabled}
 			{/if}
-		</ul>
+		</ul>*}
 	</div>
 
 	<!-- left infos-->
@@ -498,7 +498,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 	</table>
 </div>
 {/if}
-{if isset($HOOK_PRODUCT_FOOTER) && $HOOK_PRODUCT_FOOTER}{$HOOK_PRODUCT_FOOTER}{/if}
+
 
 <!-- description and features -->
 {if (isset($product) && $product->description) || (isset($features) && $features) || (isset($accessories) && $accessories) || (isset($HOOK_PRODUCT_TAB) && $HOOK_PRODUCT_TAB) || (isset($attachments) && $attachments) || isset($product) && $product->customizable}
@@ -521,7 +521,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 		<ul id="idTab2" class="bullet">
 		{foreach from=$features item=feature}
             {if isset($feature.value)}
-			    <li><span>{$feature.name|escape:'htmlall':'UTF-8'}</span> {$feature.value|escape:'htmlall':'UTF-8'}</li>
+			    <li><span>{$feature.name|escape:'htmlall':'UTF-8'}</span>: {$feature.value|escape:'htmlall':'UTF-8'}</li>
             {/if}
 		{/foreach}
 		</ul>
@@ -644,4 +644,7 @@ var fieldRequired = '{l s='Please fill in all the required fields before saving 
 		{include file="$tpl_dir./product-list.tpl" products=$packItems}
 	</div>
 {/if}
+
+{if isset($HOOK_PRODUCT_FOOTER) && $HOOK_PRODUCT_FOOTER}{$HOOK_PRODUCT_FOOTER}{/if}
+
 {/if}

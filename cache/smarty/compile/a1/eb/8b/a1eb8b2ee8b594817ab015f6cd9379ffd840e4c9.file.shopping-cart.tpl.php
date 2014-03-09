@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:54
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 22:41:16
          compiled from "/var/www/shopcase.org/themes/default/shopping-cart.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:329232125530f37ba940450-87764883%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:203315389953185b8ae9ac52-45656140%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a1eb8b2ee8b594817ab015f6cd9379ffd840e4c9' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/shopping-cart.tpl',
-      1 => 1390204462,
+      1 => 1394138474,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '329232125530f37ba940450-87764883',
+  'nocache_hash' => '203315389953185b8ae9ac52-45656140',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_53185b8b56da27_29542217',
   'variables' => 
   array (
     'account_created' => 0,
@@ -27,7 +29,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cart' => 0,
     'lastProductAdded' => 0,
     'link' => 0,
-    'productNumber' => 0,
     'use_taxes' => 0,
     'priceDisplay' => 0,
     'display_tax_label' => 0,
@@ -95,10 +96,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'HOOK_SHOPPING_CART_EXTRA' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37bb027649_62227840',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37bb027649_62227840')) {function content_530f37bb027649_62227840($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_53185b8b56da27_29542217')) {function content_53185b8b56da27_29542217($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?><?php echo smartyTranslate(array('s'=>'Your shopping cart'),$_smarty_tpl);?>
@@ -111,8 +110,7 @@ if (!empty($_capture_buffer)) {
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./breadcrumb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<h1 id="cart_title"><?php echo smartyTranslate(array('s'=>'Shopping-cart summary'),$_smarty_tpl);?>
-</h1>
+
 
 <?php if (isset($_smarty_tpl->tpl_vars['account_created']->value)){?>
 	<p class="success">
@@ -174,11 +172,9 @@ if (!empty($_capture_buffer)) {
 		<br class="clear" />
 	</div>
 <?php }?>
-<p><?php echo smartyTranslate(array('s'=>'Your shopping cart contains:'),$_smarty_tpl);?>
- <span id="summary_products_quantity"><?php echo $_smarty_tpl->tpl_vars['productNumber']->value;?>
- <?php if ($_smarty_tpl->tpl_vars['productNumber']->value==1){?><?php echo smartyTranslate(array('s'=>'product'),$_smarty_tpl);?>
-<?php }else{ ?><?php echo smartyTranslate(array('s'=>'products'),$_smarty_tpl);?>
-<?php }?></span></p>
+
+
+
 <div id="order-detail-content" class="table_block">
 	<table id="cart_summary" class="std">
 		<thead>
@@ -798,6 +794,14 @@ $_smarty_tpl->tpl_vars['key']->_loop = true;
 <?php }?>" class="button_large" title="<?php echo smartyTranslate(array('s'=>'Continue shopping'),$_smarty_tpl);?>
 ">&laquo; <?php echo smartyTranslate(array('s'=>'Continue shopping'),$_smarty_tpl);?>
 </a>
+        
+        <span class="cnt-order">
+            <a href="#opc_new_account" onclick="scroll_opc_new_account()" class="button_large" title="<?php echo smartyTranslate(array('s'=>'Оформить заказ'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'Оформить заказ'),$_smarty_tpl);?>
+</a>
+        </span>
+        
+        
 </p>
 	<?php if (!empty($_smarty_tpl->tpl_vars['HOOK_SHOPPING_CART_EXTRA']->value)){?>
 		<div class="clear"></div>

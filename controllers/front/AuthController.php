@@ -40,11 +40,11 @@ class AuthControllerCore extends FrontController
 	 */
 	public function init()
 	{
-		parent::init();
+                parent::init();
 
 		if (!Tools::getIsset('step') && $this->context->customer->isLogged() && !$this->ajax)
 			Tools::redirect('index.php?controller='.(($this->authRedirection !== false) ? urlencode($this->authRedirection) : 'my-account'));
-
+                
 		if (Tools::getValue('create_account'))
 			$this->create_account = true;
 	}
@@ -373,7 +373,24 @@ class AuthControllerCore extends FrontController
 	 */
 	protected function processSubmitAccount()
 	{
-		Hook::exec('actionBeforeSubmitAccount');
+		//$_POST['firstname'] = "";
+		//$_POST['lastname'] = "        ";
+                $_POST['city'] = "          ";
+                
+                //$_POST['guest_email'] = (Tools::getValue('guest_email') ? Tools::getValue('guest_email') : "example@example.com");
+            
+                if (isset($_POST['guest_email']) && $_POST['guest_email'])
+			$_POST['email'] = $_POST['guest_email'];
+                
+		if (!Validate::isEmail($email = Tools::getValue('email')) || empty($email))
+                {
+                    if (Tools::getValue('phone_mobile'))
+                    {
+                       $_POST['email'] = Tools::getValue('phone_mobile') . "@shopcase.org";
+                    }
+                }
+                
+                Hook::exec('actionBeforeSubmitAccount');
 		$this->create_account = true;
 		if (Tools::isSubmit('submitAccount'))
 			$this->context->smarty->assign('email_create', 1);
@@ -512,9 +529,15 @@ class AuthControllerCore extends FrontController
 	
 				if (!($country = new Country($$addresses_type->id_country)) || !Validate::isLoadedObject($country))
 					$this->errors[] = Tools::displayError('Country cannot be loaded with address->id_country');
-				$postcode = Tools::getValue('postcode');		
+                                                               
+                                if($$addresses_type->id_country == 216)
+                                {
+                                    $country->need_zip_code = false;
+                                }
+                                
+                                $postcode = Tools::getValue('postcode');		
 				/* Check zip code format */
-				if ($country->zip_code_format && !$country->checkZipCode($postcode))
+				if ($country->zip_code_format && $country->need_zip_code && !$country->checkZipCode($postcode))
 					$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
 				elseif(empty($postcode) && $country->need_zip_code)
 					$this->errors[] = Tools::displayError('A Zip / Postal code is required.');
@@ -531,8 +554,13 @@ class AuthControllerCore extends FrontController
 						$this->errors[] = Tools::displayError('Country is invalid');
 				$contains_state = isset($country) && is_object($country) ? (int)$country->contains_states: 0;
 				$id_state = isset($$addresses_type) && is_object($$addresses_type) ? (int)$$addresses_type->id_state: 0;
-				if ((Tools::isSubmit('submitAccount')|| Tools::isSubmit('submitGuestAccount')) && $contains_state && !$id_state)
-					$this->errors[] = Tools::displayError('This country requires you to choose a State.');
+                                
+                                if($$addresses_type->id_country != '216')
+                                {
+                                    if ((Tools::isSubmit('submitAccount')|| Tools::isSubmit('submitGuestAccount')) && $contains_state !== false && !$id_state) {}
+                                            $this->errors[] = Tools::displayError('This country requires you to choose a State.'); 
+                                }
+                                        
 			}
 		}
 
@@ -639,7 +667,7 @@ class AuthControllerCore extends FrontController
 				}
 			}
 		}
-
+                
 		if (count($this->errors))
 		{
 			//for retro compatibility to display guest account creation form on authentication page

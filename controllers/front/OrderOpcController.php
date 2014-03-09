@@ -37,7 +37,8 @@ class OrderOpcControllerCore extends ParentOrderController
 	 */
 	public function init()
 	{
-		parent::init();
+		//die("12");
+                parent::init();
 
 		if ($this->nbProducts)
 			$this->context->smarty->assign('virtual_cart', $this->context->cart->isVirtualCart());

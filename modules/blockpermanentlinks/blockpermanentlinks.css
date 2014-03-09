@@ -1,15 +1,30 @@
 /* block top links */
 ul#header_links {
 	list-style-type: none;
-	float: right;
-	margin-top:5px
+        float: right;
+        margin-top: -107px;
+        position: absolute;
+        left: 622px;
 }
 #header_links li {
 	float: left;
-	padding: 0 8px;
-	border-left:1px solid #333;
-	line-height:11px;
+	padding: 0 2px;
+/*	border-left:1px solid #333;
+	line-height:11px;*/
 }
+
+#header_links li a:hover {
+    background: #E64B46;
+    color: #fff;
+    text-decoration: none;
+}
+
+#header_links li a{
+    background: #fff;
+    border-radius: 3px 3px 0 0;
+    padding: 8px 10px 7px;
+}
+
 #header_links li:first-child {border:none;}
 #header_links a {text-decoration: none}
 #header_links a:hover {text-decoration:underline}

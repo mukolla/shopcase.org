@@ -51,4 +51,4 @@ $_MODULE['<{bankwire}prestashop>payment_return_ca7e41a658753c87973936d7ce2429a8'
 $_MODULE['<{bankwire}prestashop>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = 'поддержка клиентов';
 $_MODULE['<{bankwire}prestashop>payment_return_d15feee53d81ea16269e54d4784fa123'] = 'Мы обнаружили проблемы с вашим заказом. Если вы считаете, что это ошибка, свяжитесь с нами';
 $_MODULE['<{bankwire}prestashop>payment_5e1695822fc5af98f6b749ea3cbc9b4c'] = 'Оплата банковским переводом';
-$_MODULE['<{bankwire}prestashop>payment_eb1d50032721fa4c9d3518c417f91b9d'] = 'Оплата банковским переводом (время оплаты будет дольше)';
+$_MODULE['<{bankwire}prestashop>payment_eb1d50032721fa4c9d3518c417f91b9d'] = 'Оплата на карту ПриватБанка';

@@ -1,12 +1,19 @@
 /* BLOCK #reinsurance_block ******************************************************************** */
-#reinsurance_block {background:url(../blockreinsurance/img/bg_reinsurance_block.gif) repeat-x 0 0 #c3c7cb}
+#reinsurance_block {
+    background:#E64B46;
+    margin-bottom: 20px;
+}
 #reinsurance_block li {
 	float:left;
 	padding:15px 10px !important;
 	font-size:13px;
-	color:#333;
+/*	color:#333;
 	text-transform:uppercase;
-	text-shadow:0 1px 0 #fff
+	text-shadow:0 1px 0 #fff*/
+            
+        font-size: 13px;
+        color: #fff;
+        text-transform: uppercase;
 }
 #reinsurance_block .width1 li {width:960px}
 #reinsurance_block .width2 li {width:470px}

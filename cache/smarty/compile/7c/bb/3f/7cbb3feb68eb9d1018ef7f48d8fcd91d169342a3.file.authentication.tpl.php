@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:32
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 14:21:09
          compiled from "/var/www/shopcase.org/themes/default/authentication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1748129607530f37a4538c29-45651556%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:187269364953186835d51899-32205686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7cbb3feb68eb9d1018ef7f48d8fcd91d169342a3' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/authentication.tpl',
-      1 => 1390204462,
+      1 => 1393965671,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1748129607530f37a4538c29-45651556',
+  'nocache_hash' => '187269364953186835d51899-32205686',
   'function' => 
   array (
   ),
@@ -41,7 +41,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'years' => 0,
     'year' => 0,
     'sl_year' => 0,
-    'newsletter' => 0,
     'dlv_all_fields' => 0,
     'field_name' => 0,
     'b2b_enable' => 0,
@@ -53,13 +52,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'inv_all_fields' => 0,
     'HOOK_CREATE_ACCOUNT_FORM' => 0,
     'HOOK_CREATE_ACCOUNT_TOP' => 0,
+    'newsletter' => 0,
     'PS_REGISTRATION_PROCESS_TYPE' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37a4c36d72_60366958',
+  'unifunc' => 'content_5318683650a250_43181275',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37a4c36d72_60366958')) {function content_530f37a4c36d72_60366958($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5318683650a250_43181275')) {function content_5318683650a250_43181275($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 ?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?>
@@ -272,7 +272,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		</ol>
 	</div>
 	<?php }?>-->
-	<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
+        <form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
 " method="post" id="create-account_form" class="std">
 		<fieldset>
 			<h3><?php echo smartyTranslate(array('s'=>'Create an account'),$_smarty_tpl);?>
@@ -337,7 +337,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		<fieldset>
 			<h3><?php echo smartyTranslate(array('s'=>'Instant checkout'),$_smarty_tpl);?>
 </h3>
-			<div id="opc_account_form" style="display: block; ">
+                            <div id="opc_account_form" style="display: block; ">
 				<!-- Account -->
 				<p class="required text">
 					<label for="guest_email"><?php echo smartyTranslate(array('s'=>'Email address'),$_smarty_tpl);?>
@@ -345,7 +345,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 					<input type="text" class="text" id="guest_email" name="guest_email" value="<?php if (isset($_POST['guest_email'])){?><?php echo $_POST['guest_email'];?>
 <?php }?>" />
 				</p>
-				<p class="radio required">
+				<p class="radio required" style="display:none;">
 					<span><?php echo smartyTranslate(array('s'=>'Title'),$_smarty_tpl);?>
 </span>
 					<?php  $_smarty_tpl->tpl_vars['gender'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gender']->_loop = false;
@@ -371,7 +371,7 @@ $_smarty_tpl->tpl_vars['gender']->_loop = true;
 					<input type="hidden" class="text" id="customer_firstname" name="customer_firstname" value="<?php if (isset($_POST['firstname'])){?><?php echo $_POST['firstname'];?>
 <?php }?>" />
 				</p>
-				<p class="required text">
+				<p class="required text" style="display:none;">
 					<label for="lastname"><?php echo smartyTranslate(array('s'=>'Last name'),$_smarty_tpl);?>
  <sup>*</sup></label>
 					<input type="text" class="text" id="lastname" name="lastname" onblur="$('#customer_lastname').val($(this).val());" value="<?php if (isset($_POST['lastname'])){?><?php echo $_POST['lastname'];?>
@@ -379,7 +379,7 @@ $_smarty_tpl->tpl_vars['gender']->_loop = true;
 					<input type="hidden" class="text" id="customer_lastname" name="customer_lastname" value="<?php if (isset($_POST['lastname'])){?><?php echo $_POST['lastname'];?>
 <?php }?>" />
 				</p>
-				<p class="select">
+				<p class="select" style="display:none;">
 					<span><?php echo smartyTranslate(array('s'=>'Date of Birth'),$_smarty_tpl);?>
 </span>
 					<select id="days" name="days">
@@ -422,18 +422,9 @@ $_smarty_tpl->tpl_vars['year']->_loop = true;
 						<?php } ?>
 					</select>
 				</p>
-				<?php if (isset($_smarty_tpl->tpl_vars['newsletter']->value)&&$_smarty_tpl->tpl_vars['newsletter']->value){?>
-					<p class="checkbox">
-						<input type="checkbox" name="newsletter" id="newsletter" value="1" <?php if (isset($_POST['newsletter'])&&$_POST['newsletter']=='1'){?>checked="checked"<?php }?> autocomplete="off"/>
-						<label for="newsletter"><?php echo smartyTranslate(array('s'=>'Sign up for our newsletter!'),$_smarty_tpl);?>
-</label>
-					</p>
-					<p class="checkbox">
-						<input type="checkbox" name="optin" id="optin" value="1" <?php if (isset($_POST['optin'])&&$_POST['optin']=='1'){?>checked="checked"<?php }?> autocomplete="off"/>
-						<label for="optin"><?php echo smartyTranslate(array('s'=>'Receive special offers from our partners!'),$_smarty_tpl);?>
-</label>
-					</p>
-				<?php }?>
+                                
+                                
+
 				<h3><?php echo smartyTranslate(array('s'=>'Delivery address'),$_smarty_tpl);?>
 </h3>
 				<?php  $_smarty_tpl->tpl_vars['field_name'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['field_name']->_loop = false;
@@ -476,14 +467,10 @@ $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 						</p>
 					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="postcode"){?>
 					<?php $_smarty_tpl->tpl_vars['postCodeExist'] = new Smarty_variable(true, null, 0);?>
-						<p class="required postcode text">
-							<label for="postcode"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
- <sup>*</sup></label>
-							<input type="text" class="text" name="postcode" id="postcode" value="<?php if (isset($_POST['postcode'])){?><?php echo $_POST['postcode'];?>
-<?php }?>" onblur="$('#postcode').val($('#postcode').val().toUpperCase());" />
-						</p>
+                                               
+
 					<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="city"){?>
-						<p class="required text">
+						<p class="required text" style="display: none;">
 							<label for="city"><?php echo smartyTranslate(array('s'=>'City'),$_smarty_tpl);?>
  <sup>*</sup></label>
 							<input type="text" class="text" name="city" id="city" value="<?php if (isset($_POST['city'])){?><?php echo $_POST['city'];?>
@@ -931,7 +918,7 @@ $_smarty_tpl->tpl_vars['field_name']->_loop = true;
 				</p>
 			<?php }elseif($_smarty_tpl->tpl_vars['field_name']->value=="postcode"){?>
 			<?php $_smarty_tpl->tpl_vars['postCodeExist'] = new Smarty_variable(true, null, 0);?>
-				<p class="required postcode text">
+                                <p class="required postcode text">
 					<label for="postcode"><?php echo smartyTranslate(array('s'=>'Zip / Postal Code'),$_smarty_tpl);?>
  <sup>*</sup></label>
 					<input type="text" class="text" name="postcode" id="postcode" value="<?php if (isset($_POST['postcode'])){?><?php echo $_POST['postcode'];?>

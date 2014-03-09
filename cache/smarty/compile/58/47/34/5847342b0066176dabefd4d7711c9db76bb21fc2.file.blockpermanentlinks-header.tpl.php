@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 15:33:06
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 12:48:28
          compiled from "/var/www/shopcase.org/modules/blockpermanentlinks/blockpermanentlinks-header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:425199993530f3e922260c0-42934894%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9652009865318527c91b975-56125145%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5847342b0066176dabefd4d7711c9db76bb21fc2' => 
     array (
       0 => '/var/www/shopcase.org/modules/blockpermanentlinks/blockpermanentlinks-header.tpl',
-      1 => 1390204460,
+      1 => 1393524938,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '425199993530f3e922260c0-42934894',
+  'nocache_hash' => '9652009865318527c91b975-56125145',
   'function' => 
   array (
   ),
@@ -23,20 +23,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f3e92257c33_26116620',
+  'unifunc' => 'content_5318527c9600f0_37529362',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f3e92257c33_26116620')) {function content_530f3e92257c33_26116620($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5318527c9600f0_37529362')) {function content_5318527c9600f0_37529362($_smarty_tpl) {?>
 
 <!-- Block permanent links module HEADER -->
 <ul id="header_links">
-	<li id="header_link_contact"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('contact',true), ENT_QUOTES, 'UTF-8', true);?>
-" title="<?php echo smartyTranslate(array('s'=>'contact','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
-"><?php echo smartyTranslate(array('s'=>'contact','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
+	
+        <li id="header_link_sitemap"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('deliveryinfo'), ENT_QUOTES, 'UTF-8', true);?>
+" title="<?php echo smartyTranslate(array('s'=>'Оплата и доставка','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'Оплата и доставка','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
 </a></li>
-	<li id="header_link_sitemap"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('sitemap'), ENT_QUOTES, 'UTF-8', true);?>
+        <li id="header_link_sitemap"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('deliveryinfo'), ENT_QUOTES, 'UTF-8', true);?>
+" title="<?php echo smartyTranslate(array('s'=>'О магазине','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'О магазине','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
+</a></li>
+        <li id="header_link_sitemap"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('sitemap'), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'sitemap','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
 "><?php echo smartyTranslate(array('s'=>'sitemap','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
 </a></li>
+        <li id="header_link_contact"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('contact',true), ENT_QUOTES, 'UTF-8', true);?>
+" title="<?php echo smartyTranslate(array('s'=>'contact','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'contact','mod'=>'blockpermanentlinks'),$_smarty_tpl);?>
+</a></li>
+        
 	<li id="header_link_bookmark">
 		<script type="text/javascript">writeBookmarkLink('<?php echo $_smarty_tpl->tpl_vars['come_from']->value;?>
 ', '<?php echo addslashes(addslashes($_smarty_tpl->tpl_vars['meta_title']->value));?>

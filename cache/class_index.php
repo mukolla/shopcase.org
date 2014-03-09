@@ -310,6 +310,8 @@
   'DbQueryCore' => 'classes/db/DbQuery.php',
   'Delivery' => '',
   'DeliveryCore' => 'classes/Delivery.php',
+  'DeliveryinfoController' => '',
+  'DeliveryinfoControllerCore' => 'controllers/front/DeliveryinfoController.php',
   'Discount' => '',
   'DiscountController' => '',
   'DiscountControllerCore' => 'controllers/front/DiscountController.php',

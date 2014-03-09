@@ -76,8 +76,21 @@
 			<!-- Header -->
 			<div id="header" class="grid_9 alpha omega">
 				<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
-					<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if}/>
+                                    
+                                <!--    <img class="logo" src="/themes/default/img/logo.png" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if}/> -->
+                                    
+                                    
+				   <img class="logo" src="/themes/default/img/logo.png" alt="{$shop_name|escape:'htmlall':'UTF-8'}"/>
+                                        
 				</a>
+                                   
+                                <div id="logo-phone">
+                                        <ul>
+                                                <li><span><img class="icon-kyivstar" src="/themes/default/img/mtc_icon.png"></span>(095)152-37-98</li>
+                                                <li><span><img class="icon-mts" src="/themes/default/img/kyevstar_icon.png"></span>(095)152-37-98</li>
+                                        </ul>
+                                </div>
+                                   
 				<div id="header_right" class="grid_9 omega">
 					{$HOOK_TOP}
 				</div>
@@ -88,7 +101,13 @@
 				<div id="left_column" class="column grid_2 alpha">
 					{$HOOK_LEFT_COLUMN}
 				</div>
-
+                                
+                                
+                                
+                                {*{$smarty.get.page}*}
+                                
 				<!-- Center -->
-				<div id="center_column" class=" grid_5">
+				{*<div id="center_column" class="{if $smarty.get.controller == 'order'}grid_9{else}grid_7{/if}">*}
+                                <div id="center_column" class="grid_7">
+                                    
 	{/if}

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 13:03:37
+<?php /* Smarty version Smarty-3.1.14, created on 2014-03-06 12:48:29
          compiled from "/var/www/shopcase.org/themes/default/product.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1632865027530f37a98925c5-58778740%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2682996535318527d627a87-28529690%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e337f892e6f802319846dc3483532e7b72337b22' => 
     array (
       0 => '/var/www/shopcase.org/themes/default/product.tpl',
-      1 => 1390204462,
+      1 => 1393854868,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1632865027530f37a98925c5-58778740',
+  'nocache_hash' => '2682996535318527d627a87-28529690',
   'function' => 
   array (
   ),
@@ -70,7 +70,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'imageTitlte' => 0,
     'mediumSize' => 0,
     'img_dir' => 0,
-    'HOOK_EXTRA_LEFT' => 0,
     'packItems' => 0,
     'packItem' => 0,
     'HOOK_PRODUCT_ACTIONS' => 0,
@@ -95,7 +94,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'HOOK_EXTRA_RIGHT' => 0,
     'quantity_discounts' => 0,
     'quantity_discount' => 0,
-    'HOOK_PRODUCT_FOOTER' => 0,
     'features' => 0,
     'accessories' => 0,
     'HOOK_PRODUCT_TAB' => 0,
@@ -109,12 +107,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'customizationField' => 0,
     'textFields' => 0,
     'HOOK_PRODUCT_TAB_CONTENT' => 0,
+    'HOOK_PRODUCT_FOOTER' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_530f37aa356f23_80234567',
+  'unifunc' => 'content_5318527e13b8a2_31573888',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_530f37aa356f23_80234567')) {function content_530f37aa356f23_80234567($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5318527e13b8a2_31573888')) {function content_5318527e13b8a2_31573888($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.escape.php';
 if (!is_callable('smarty_modifier_date_format')) include '/var/www/shopcase.org/tools/smarty/plugins/modifier.date_format.php';
 if (!is_callable('smarty_function_math')) include '/var/www/shopcase.org/tools/smarty/plugins/function.math.php';
 if (!is_callable('smarty_function_counter')) include '/var/www/shopcase.org/tools/smarty/plugins/function.counter.php';
@@ -482,15 +481,7 @@ icon/cancel_11x13.gif" alt="<?php echo smartyTranslate(array('s'=>'Cancel'),$_sm
 " width="11" height="13"/> <a id="resetImages" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getProductLink($_smarty_tpl->tpl_vars['product']->value), ENT_QUOTES, 'UTF-8', true);?>
 " onclick="$('span#wrapResetImages').hide('slow');return (false);"><?php echo smartyTranslate(array('s'=>'Display all pictures'),$_smarty_tpl);?>
 </a></span></p><?php }?>
-		<!-- usefull links-->
-		<ul id="usefull_link_block">
-			<?php if ($_smarty_tpl->tpl_vars['HOOK_EXTRA_LEFT']->value){?><?php echo $_smarty_tpl->tpl_vars['HOOK_EXTRA_LEFT']->value;?>
-<?php }?>
-			<li class="print"><a href="javascript:print();"><?php echo smartyTranslate(array('s'=>'Print'),$_smarty_tpl);?>
-</a></li>
-			<?php if ($_smarty_tpl->tpl_vars['have_image']->value&&!$_smarty_tpl->tpl_vars['jqZoomEnabled']->value){?>
-			<?php }?>
-		</ul>
+		
 	</div>
 
 	<!-- left infos-->
@@ -875,8 +866,7 @@ $_smarty_tpl->tpl_vars['quantity_discount']->_loop = true;
 	</table>
 </div>
 <?php }?>
-<?php if (isset($_smarty_tpl->tpl_vars['HOOK_PRODUCT_FOOTER']->value)&&$_smarty_tpl->tpl_vars['HOOK_PRODUCT_FOOTER']->value){?><?php echo $_smarty_tpl->tpl_vars['HOOK_PRODUCT_FOOTER']->value;?>
-<?php }?>
+
 
 <!-- description and features -->
 <?php if ((isset($_smarty_tpl->tpl_vars['product']->value)&&$_smarty_tpl->tpl_vars['product']->value->description)||(isset($_smarty_tpl->tpl_vars['features']->value)&&$_smarty_tpl->tpl_vars['features']->value)||(isset($_smarty_tpl->tpl_vars['accessories']->value)&&$_smarty_tpl->tpl_vars['accessories']->value)||(isset($_smarty_tpl->tpl_vars['HOOK_PRODUCT_TAB']->value)&&$_smarty_tpl->tpl_vars['HOOK_PRODUCT_TAB']->value)||(isset($_smarty_tpl->tpl_vars['attachments']->value)&&$_smarty_tpl->tpl_vars['attachments']->value)||isset($_smarty_tpl->tpl_vars['product']->value)&&$_smarty_tpl->tpl_vars['product']->value->customizable){?>
@@ -911,7 +901,7 @@ $_smarty_tpl->tpl_vars['feature']->_loop = true;
 ?>
             <?php if (isset($_smarty_tpl->tpl_vars['feature']->value['value'])){?>
 			    <li><span><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['feature']->value['name'], 'htmlall', 'UTF-8');?>
-</span> <?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['feature']->value['value'], 'htmlall', 'UTF-8');?>
+</span>: <?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['feature']->value['value'], 'htmlall', 'UTF-8');?>
 </li>
             <?php }?>
 		<?php } ?>
@@ -1118,5 +1108,9 @@ loader.gif" alt="loader" /></span>
 
 	</div>
 <?php }?>
+
+<?php if (isset($_smarty_tpl->tpl_vars['HOOK_PRODUCT_FOOTER']->value)&&$_smarty_tpl->tpl_vars['HOOK_PRODUCT_FOOTER']->value){?><?php echo $_smarty_tpl->tpl_vars['HOOK_PRODUCT_FOOTER']->value;?>
+<?php }?>
+
 <?php }?>
 <?php }} ?>
